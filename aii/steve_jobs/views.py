@@ -6,14 +6,16 @@ from .forms import ChatForm
 
 openai.api_key = settings.OPENAI_API_KEY
 
+
 def generate_response():
     messages = [{"role": message.role, "content": message.content} for message in Message.objects.all()]
 
-    if not messages:
-        messages.append({
-            "role": "system",
-            "content": "Act as Steve Jobs. Respond like in the situation of online chat to the input."
-        })
+    steve_jobs_prompt = {
+        "role": "system",
+        "content": "Act as Steve Jobs. Respond like in the situation of online chat to the input."
+    }
+    if steve_jobs_prompt not in messages:
+        messages.insert(0, steve_jobs_prompt)
 
     gpt_response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo", 
