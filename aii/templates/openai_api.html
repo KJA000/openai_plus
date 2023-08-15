@@ -1,0 +1,11 @@
+{% for message in messages %}
+    <div class="{{ message.role }}">
+        <p>{{ message.content }}</p>
+    </div>
+{% endfor %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Send</button>
+</form>
