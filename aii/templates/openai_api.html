@@ -1,11 +1,15 @@
 {% for message in messages %}
-    <div class="{{ message.role }}">
-        <p>{{ message.content }}</p>
-    </div>
-{% endfor %}
+        <div class="{{ message.role }}">
+            <p>{{ message.content }}</p>
+        </div>
+    {% endfor %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Send</button>
-</form>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Send</button>
+    </form>
+    <form method="post" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit" name="clear_messages">Clear Chat</button>
+    </form>

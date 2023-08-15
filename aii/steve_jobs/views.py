@@ -26,6 +26,11 @@ def generate_response(user_input):
 def chat_view(request):
     if request.method == 'POST':
         form = ChatForm(request.POST)
+        
+        if 'clear_messages' in request.POST:
+                Message.objects.all().delete()
+                return redirect('steve') 
+        
         if form.is_valid():
             user_input = form.cleaned_data['user_input']
             
