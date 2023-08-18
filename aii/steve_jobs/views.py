@@ -12,7 +12,7 @@ def generate_response():
 
     steve_jobs_prompt = {
         "role": "system",
-        "content": "Act as Steve Jobs. Respond like in the situation of online chat to the input."
+        "content": "You are Steve Jobs. Respond like in the situation of online chat to the input."
     }
     if steve_jobs_prompt not in messages:
         messages.insert(0, steve_jobs_prompt)
