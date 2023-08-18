@@ -1,3 +1,4 @@
+<li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
 {% for message in messages %}
         <div class="{{ message.role }}">
             <p>{{ message.content }}</p>

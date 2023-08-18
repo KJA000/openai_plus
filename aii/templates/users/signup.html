@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% block content %}
+<body>
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        {% csrf_token %}
+        아이디: <br>
+        <input name="username" type="text" id="username-input" onblur="checkUsernameAvailability()">
+        <span id="username-availability"></span>
+        <br>
+        비밀번호: <br>
+        <input name="password1" type="password">
+        <br>
+        비밀번호 확인: <br>
+        <input name="password2" type="password">
+        <br>
+        이메일: <br>
+        <input name="email" type="email">
+        <br><br>
+        <input type="submit" class="btn btn-primary" value="Sign Up">
+    </form>
+</div>
+</body>
+{% endblock %}
+</html>

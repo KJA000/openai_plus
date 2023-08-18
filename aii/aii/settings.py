@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'steve_jobs',
     'main',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -131,4 +132,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = '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'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'login'
+
+# settings.py
+
+LOGIN_URL = 'login'
