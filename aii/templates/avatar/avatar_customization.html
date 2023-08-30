@@ -1,0 +1,13 @@
+{% load static %}
+<form method="post">
+    {% csrf_token %}
+    <h3>Select Hair Style:</h3>
+    {% for hair_value, hair_label in form.hair.field.choices %}
+    <label>
+        <input type="radio" name="hair" value="{{ hair_value }}">
+        <img src="https://98498.s3.ap-southeast-2.amazonaws.com/%ED%99%94%EB%A9%B4+%EC%BA%A1%EC%B2%98+2022-10-16+210113.png">
+    </label>
+    {% endfor %}
+    <!-- Similarly for eyes and clothes -->
+    <input type="submit" value="Customize">
+</form>

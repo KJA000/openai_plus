@@ -17,7 +17,7 @@ def signup(request):
             try:
                 user = User.objects.create_user(username=username, password=password1, email=email)
                 auth.login(request, user)
-                return redirect('login')
+                return redirect('avatar')
             except IntegrityError:
                 error_message = '이미 등록된 아이디입니다.'
                 return render(request, 'users/signup.html', {'error_message': error_message})

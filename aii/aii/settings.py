@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'steve_jobs',
     'main',
     'users',
+    'avatar',
 ]
 
 MIDDLEWARE = [
@@ -124,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -132,7 +133,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = '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'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = 'login'
