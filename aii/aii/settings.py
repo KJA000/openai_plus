@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = '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'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = 'login'
